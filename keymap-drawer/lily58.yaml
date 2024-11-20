@@ -26,16 +26,16 @@ layers:
   - P
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - A
-  - S
-  - D
-  - F
+  - {t: A, h: LEFT CONTROL}
+  - {t: S, h: LEFT SHIFT}
+  - {t: D, h: LEFT ALT}
+  - {t: F, h: LEFT GUI}
   - G
   - H
-  - J
-  - K
-  - L
-  - ;
+  - {t: J, h: RIGHT GUI}
+  - {t: K, h: RIGHT ALT}
+  - {t: L, h: RIGHT SHIFT}
+  - {t: ;, h: RIGHT CONTROL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Z
@@ -51,8 +51,8 @@ layers:
   - .
   - /
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: canary, h: toggle}
+  - {t: raise, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -85,16 +85,16 @@ layers:
   - ''''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - C
-  - R
-  - S
-  - T
+  - {t: C, h: LEFT CONTROL}
+  - {t: R, h: LEFT SHIFT}
+  - {t: S, h: LEFT ALT}
+  - {t: T, h: LEFT GUI}
   - G
   - M
-  - N
-  - E
-  - I
-  - A
+  - {t: N, h: RIGHT GUI}
+  - {t: E, h: RIGHT ALT}
+  - {t: I, h: RIGHT SHIFT}
+  - {t: A, h: RIGHT CONTROL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Q
@@ -110,8 +110,8 @@ layers:
   - ','
   - .
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: qwerty, h: toggle}
+  - {t: raise, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -120,6 +120,16 @@ layers:
   - {t: ▽, type: trans}
   raise:
   - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -159,18 +169,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: qwerty, h: toggle}
+  - {t: canary, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
