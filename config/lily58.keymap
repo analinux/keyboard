@@ -8,6 +8,28 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        HML: HML {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57>;
+            tapping-term-ms = <200>;
+        };
+
+        HMR: HMR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -20,11 +42,11 @@
             //                     | GUI  | LALT | SPC  | LOWER  |  | RAISE |ENTER | RAISE | GUI   |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans     &trans   &trans    &trans
-&trans  &kp Q   &kp W   &kp E   &kp R   &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
-&trans  &kp A   &kp S   &kp D   &kp F   &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
-&trans  &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans               &trans             &trans           &trans           &trans                    &trans  &trans            &trans            &trans              &trans                   &trans
+&trans  &kp Q                &kp W              &kp E            &kp R            &kp T                     &kp Y   &kp U             &kp I             &kp O               &kp P                    &trans
+&trans  &HML LEFT_CONTROL A  &HML LEFT_SHIFT S  &HML LEFT_ALT D  &HML LEFT_GUI F  &kp G                     &kp H   &HMR RIGHT_GUI J  &HMR RIGHT_ALT K  &HMR RIGHT_SHIFT L  &HMR RIGHT_CONTROL SEMI  &trans
+&trans  &kp Z                &kp X              &kp C            &kp V            &kp B   &trans    &trans  &kp N   &kp M             &kp COMMA         &kp DOT             &kp FSLH                 &trans
+                                                &to 1            &to 2            &trans  &trans    &trans  &trans  &trans            &trans
             >;
         };
 
@@ -54,11 +76,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans    &trans     &trans    &trans
-&trans  &kp W   &kp L   &kp Y   &kp P   &kp B                     &kp Z   &kp F   &kp O     &kp U      &kp APOS  &trans
-&trans  &kp C   &kp R   &kp S   &kp T   &kp G                     &kp M   &kp N   &kp E     &kp I      &kp A     &trans
-&trans  &kp Q   &kp J   &kp V   &kp D   &kp K   &trans    &trans  &kp X   &kp H   &kp FSLH  &kp COMMA  &kp DOT   &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans               &trans             &trans           &trans           &trans                    &trans  &trans            &trans            &trans              &trans                &trans
+&trans  &kp W                &kp L              &kp Y            &kp P            &kp B                     &kp Z   &kp F             &kp O             &kp U               &kp APOS              &trans
+&trans  &HML LEFT_CONTROL C  &HML LEFT_SHIFT R  &HML LEFT_ALT S  &HML LEFT_GUI T  &kp G                     &kp M   &HMR RIGHT_GUI N  &HMR RIGHT_ALT E  &HMR RIGHT_SHIFT I  &HMR RIGHT_CONTROL A  &trans
+&trans  &kp Q                &kp J              &kp V            &kp D            &kp K   &trans    &trans  &kp X   &kp H             &kp FSLH          &kp COMMA           &kp DOT               &trans
+                                                &to 0            &to 2            &trans  &trans    &trans  &trans  &trans            &trans
             >;
         };
 
@@ -71,11 +93,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+                        &to 0   &to 1   &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
