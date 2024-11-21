@@ -58,7 +58,7 @@ layers:
   - {t: ▽, type: trans}
   - BACKSPACE
   - RET
-  - {t: ▽, type: trans}
+  - {t: '3', h: toggle}
   canary:
   - ESC
   - '1'
