@@ -42,11 +42,11 @@
             //                     | GUI  | LALT | SPC  | LOWER  |  | RAISE |ENTER | RAISE | GUI   |
 
             bindings = <
-&trans  &trans               &trans             &trans           &trans           &trans                    &trans  &trans            &trans            &trans              &trans                   &trans
-&trans  &kp Q                &kp W              &kp E            &kp R            &kp T                     &kp Y   &kp U             &kp I             &kp O               &kp P                    &trans
-&trans  &HML LEFT_CONTROL A  &HML LEFT_SHIFT S  &HML LEFT_ALT D  &HML LEFT_GUI F  &kp G                     &kp H   &HMR RIGHT_GUI J  &HMR RIGHT_ALT K  &HMR RIGHT_SHIFT L  &HMR RIGHT_CONTROL SEMI  &trans
-&trans  &kp Z                &kp X              &kp C            &kp V            &kp B   &trans    &trans  &kp N   &kp M             &kp COMMA         &kp DOT             &kp FSLH                 &trans
-                                                &to 1            &to 2            &trans  &trans    &trans  &trans  &trans            &trans
+&kp ESC  &kp N1               &kp N2             &kp N3           &kp N4           &kp N5                         &kp N6         &kp N7            &kp N8            &kp N9              &kp N0                   &kp MINUS
+&kp TAB  &kp Q                &kp W              &kp E            &kp R            &kp T                          &kp Y          &kp U             &kp I             &kp O               &kp P                    &kp MINUS
+&trans   &HML LEFT_CONTROL A  &HML LEFT_SHIFT S  &HML LEFT_ALT D  &HML LEFT_GUI F  &kp G                          &kp H          &HMR RIGHT_GUI J  &HMR RIGHT_ALT K  &HMR RIGHT_SHIFT L  &HMR RIGHT_CONTROL SEMI  &kp SQT
+&trans   &kp Z                &kp X              &kp C            &kp V            &kp B   &kp LBKT     &kp RBKT  &kp N          &kp M             &kp COMMA         &kp DOT             &kp FSLH                 &kp EQUAL
+                                                 &to 1            &trans           &mo 2   &kp SPACE    &trans    &kp BACKSPACE  &kp RET           &trans
             >;
         };
 
@@ -76,11 +76,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans               &trans             &trans           &trans           &trans                    &trans  &trans            &trans            &trans              &trans                &trans
-&trans  &kp W                &kp L              &kp Y            &kp P            &kp B                     &kp Z   &kp F             &kp O             &kp U               &kp APOS              &trans
-&trans  &HML LEFT_CONTROL C  &HML LEFT_SHIFT R  &HML LEFT_ALT S  &HML LEFT_GUI T  &kp G                     &kp M   &HMR RIGHT_GUI N  &HMR RIGHT_ALT E  &HMR RIGHT_SHIFT I  &HMR RIGHT_CONTROL A  &trans
-&trans  &kp Q                &kp J              &kp V            &kp D            &kp K   &trans    &trans  &kp X   &kp H             &kp FSLH          &kp COMMA           &kp DOT               &trans
-                                                &to 0            &to 2            &trans  &trans    &trans  &trans  &trans            &trans
+&kp ESC  &kp N1               &kp N2             &kp N3           &kp N4           &kp N5                         &kp N6  &kp N7            &kp N8            &kp N9              &kp N0                &kp GRAVE
+&kp TAB  &kp W                &kp L              &kp Y            &kp P            &kp B                          &kp Z   &kp F             &kp O             &kp U               &kp APOS              &kp MINUS
+&trans   &HML LEFT_CONTROL C  &HML LEFT_SHIFT R  &HML LEFT_ALT S  &HML LEFT_GUI T  &kp G                          &kp M   &HMR RIGHT_GUI N  &HMR RIGHT_ALT E  &HMR RIGHT_SHIFT I  &HMR RIGHT_CONTROL A  &kp SEMI
+&trans   &kp Q                &kp J              &kp V            &kp D            &kp K   &kp LBKT     &kp RBKT  &kp X   &kp H             &kp FSLH          &kp COMMA           &kp DOT               &kp EQUAL
+                                                 &to 0            &to 2            &trans  &kp SPACE    &kp LGUI  &trans  &trans            &trans
             >;
         };
 
@@ -93,11 +93,21 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &to 0   &to 1   &trans  &trans    &trans  &trans  &trans  &trans
+&trans    &kp F1    &kp F2          &kp F3     &kp F4  &kp F5                      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&kp CAPS  &trans    &kp UP_ARROW    &trans     &trans  &trans                      &trans  &trans  &trans  &trans  &trans   &trans
+&trans    &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans                      &trans  &trans  &trans  &trans  &trans   &trans
+&trans    &trans    &trans          &trans     &trans  &trans  &kp F11    &kp F12  &trans  &trans  &trans  &trans  &trans   &trans
+                                    &to 0      &to 1   &trans  &trans     &trans   &trans  &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                          &kp N6    &kp N7     &kp N8     &kp N9   &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                           &kp Y     &kp U      &kp I      &kp O    &kp P     &kp MINUS
+&kp LSHFT  &kp A   &kp S   &kp D     &kp F     &kp G                           &kp H     &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT     &kp RBKT   &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp EQUAL
+                           &kp LALT  &kp LGUI  &mo 2   &kp LCTRL    &kp LCTRL  &kp BSPC  &kp ENTER  &trans
             >;
         };
     };
