@@ -57,7 +57,7 @@ layers:
   - SPACE
   - {t: ▽, type: trans}
   - BACKSPACE
-  - RET
+  - RETURN
   - {t: gaming, h: toggle}
   canary:
   - ESC
@@ -110,14 +110,14 @@ layers:
   - ','
   - .
   - '='
-  - {t: qwerty, h: toggle}
+  - {t: canary, h: toggle}
   - {t: ▽, type: trans}
   - nav
   - SPACE
   - {t: ▽, type: trans}
   - BACKSPACE
-  - RET
-  - {t: ▽, type: trans}
+  - RETURN
+  - {t: gaming, h: toggle}
   gaming:
   - ESC
   - '1'
