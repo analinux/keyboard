@@ -16,7 +16,8 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
         };
 
         HMR: HMR {
@@ -26,7 +27,8 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -46,7 +48,7 @@
 &kp TAB  &kp Q                &kp W              &kp E            &kp R            &kp T                          &kp Y          &kp U             &kp I             &kp O               &kp P                    &kp MINUS
 &trans   &HML LEFT_CONTROL A  &HML LEFT_SHIFT S  &HML LEFT_ALT D  &HML LEFT_GUI F  &kp G                          &kp H          &HMR RIGHT_GUI J  &HMR RIGHT_ALT K  &HMR RIGHT_SHIFT L  &HMR RIGHT_CONTROL SEMI  &kp SQT
 &trans   &kp Z                &kp X              &kp C            &kp V            &kp B   &kp LBKT     &kp RBKT  &kp N          &kp M             &kp COMMA         &kp DOT             &kp FSLH                 &kp EQUAL
-                                                 &tog 1           &trans           &mo 3   &kp SPACE    &trans    &kp BACKSPACE  &kp RET           &tog 2
+                                                 &tog 1           &trans           &mo 3   &kp SPACE    &trans    &kp BACKSPACE  &kp RETURN        &tog 2
             >;
         };
 
@@ -63,7 +65,7 @@
 &kp TAB  &kp W                &kp L              &kp Y            &kp P            &kp B                          &kp Z          &kp F             &kp O             &kp U               &kp APOS              &kp MINUS
 &trans   &HML LEFT_CONTROL C  &HML LEFT_SHIFT R  &HML LEFT_ALT S  &HML LEFT_GUI T  &kp G                          &kp M          &HMR RIGHT_GUI N  &HMR RIGHT_ALT E  &HMR RIGHT_SHIFT I  &HMR RIGHT_CONTROL A  &kp SEMI
 &trans   &kp Q                &kp J              &kp V            &kp D            &kp K   &kp LBKT     &kp RBKT  &kp X          &kp H             &kp FSLH          &kp COMMA           &kp DOT               &kp EQUAL
-                                                 &tog 0           &trans           &mo 3   &kp SPACE    &trans    &kp BACKSPACE  &kp RET           &trans
+                                                 &tog 1           &trans           &mo 3   &kp SPACE    &trans    &kp BACKSPACE  &kp RETURN        &tog 2
             >;
         };
 
